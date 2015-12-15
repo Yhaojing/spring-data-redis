@@ -1,0 +1,19 @@
+	1. Pom.xml 引入依赖
+		spring-data-redis
+
+		Jedis
+
+
+	2. applicationConfig.xml配置文件
+		传统：
+		<context:component-scanbase-package="com.redis"/>
+		<context:annotation-config/>
+
+		加载redis配置文件
+		a. <context:property-placeholder location = "classpath:redis.properties"/>
+
+		接着就是详细配置
+
+	3. redisTemplate是核心
+		a. 其中的各种方法的掌握，目前测试类里包含简单的opsFor..()操作
+		b. 要注意经过spring data redis 存取的数据都是经过序列化的，接下来会继续研究序列化相关API，敬请期待
